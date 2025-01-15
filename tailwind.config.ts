@@ -1,18 +1,34 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss'
 
 export default {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+      },
+      boxShadow: {
+        orb: '0 0 40px 5px rgba(244, 249, 223, 1)',
+      },
+      keyframes: {
+        hover: {
+          '0%, 100%': {
+            transform: 'translateY(0px)',
+          },
+          '50%': {
+            transform: 'translateY(-10px)',
+          },
+        },
+      },
+      animation: {
+        hover: 'hover 3s infinite ease-in-out forwards',
       },
     },
   },
   plugins: [],
-} satisfies Config;
+} satisfies Config
