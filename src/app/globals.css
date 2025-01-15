@@ -9,14 +9,19 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #010208;
+    --backgroundShade: #050921;
     --foreground: #ededed;
   }
 }
 
 body {
   color: var(--foreground);
-  background: var(--background);
+  background: linear-gradient(
+    45deg,
+    var(--backgroundShade),
+    var(--background)
+  );
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -27,4 +32,28 @@ body {
     rgb(244, 249, 223) 95%,
     rgb(255, 255, 255) 100%
   );
+}
+
+.card { 
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+}
+
+.card-front {
+  backface-visibility: hidden;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+.card:hover {
+  transform: translateY(-30%) scale(1.2) rotateY(180deg);
+  z-index: 9;
+}
+
+.card:active {
+  transform: translateY(-30%) scale(1.2) rotateY(0deg);
 }
