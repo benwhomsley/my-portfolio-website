@@ -12,9 +12,6 @@ export default {
         background: 'var(--background)',
         foreground: 'var(--foreground)',
       },
-      boxShadow: {
-        orb: '0 0 40px 5px rgba(244, 249, 223, 1)',
-      },
       keyframes: {
         hover: {
           '0%, 100%': {

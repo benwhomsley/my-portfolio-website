@@ -26,12 +26,8 @@ body {
 }
 
 .orb {
-  background: radial-gradient(
-    circle,
-    rgb(223, 246, 173) 0%,
-    rgb(244, 249, 223) 95%,
-    rgb(255, 255, 255) 100%
-  );
+  background: rgb(21,38,142);
+  background: radial-gradient(circle, rgba(21,38,142,1) 0%, rgba(21,38,142,0.1) 100%);
 }
 
 .card { 
