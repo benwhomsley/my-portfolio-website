@@ -1,8 +1,22 @@
+'use client'
+
 import Image from 'next/image'
 import Heading from './components/heading'
 import Experience from './components/experience'
+import Splitting from 'splitting'
+import { useEffect } from 'react'
 
 export default function Home() {
+  useEffect(() => {
+    Splitting()
+  }, [])
+
+  const renderOpenForWorkBadge = () => (
+    <div>
+      <span data-splitting>Open for work</span>
+    </div>
+  )
+
   const renderHeaderSection = () => (
     <section className='min-h-screen w-full flex flex-col justify-center p-10'>
       <Heading component='h1'>Hi, I&apos;m Ben.</Heading>
@@ -140,6 +154,7 @@ export default function Home() {
   return (
     <div className='grid max-w-[1200px] mx-auto items-center min-h-screen font-[family-name:var(--font-geist-sans)]'>
       <main className='flex flex-col gap-8 row-start-2 items-center sm:items-start'>
+        {renderOpenForWorkBadge()}
         <div className='orb blur-3xl opacity-30 absolute w-[600px] h-[600px] top-0 left-0 rounded-full animate-hover'></div>
         {renderHeaderSection()}
         {renderExperienceSection()}
