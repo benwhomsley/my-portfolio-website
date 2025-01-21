@@ -75,72 +75,63 @@ export default function Home() {
           There&apos;s more to a person than just work, peak behind the curtain.
         </Heading>
       </div>
-      <Heading
-        component='h3'
-        className='mb-1'
-      >
-        Father of one
-      </Heading>
-      <Heading
-        component='h3'
-        className='mb-1'
-      >
-        Black belt (1st dan) in Taekwondo
-      </Heading>
-      <Heading
-        component='h3'
-        className='mb-1'
-      >
-        Video & board game lover
-      </Heading>
-      <Heading
-        component='h3'
-        className='mb-1'
-      >
-        Dabble in creative coding from time to time
-      </Heading>
-      <div className='relative flex flex-wrap py-8'>
-        <div className='card relative w-[250px] h-[300px] rotate-6 rounded-lg'>
-          <div className='card-back absolute top-0 w-full h-full z-0 bg-black rounded-lg'></div>
-          <div className='card-front absolute top-0 p-5 bg-black w-full h-full z-10 rounded-lg overflow-hidden'>
-            <Image
-              src={'/images/family.jpg'}
-              fill
-              objectFit='cover'
-              alt=''
-              className='w-[calc(100%-40px)]'
-            />
-          </div>
-        </div>
-        <div className='card relative w-[250px] h-[300px] -rotate-3 rounded-lg overflow-hidden'>
-          <div className='card-back relative w-full h-full z-0 bg-black'></div>
+
+      <div className='relative flex flex-wrap gap-8 py-8'>
+        <div className='relative w-[320px] h-[400px] rounded-lg overflow-hidden'>
           <Image
             src={'/images/family.jpg'}
             fill
             objectFit='cover'
             alt=''
-            className='card-front z-10'
+            className='w-[calc(100%-40px)]'
           />
         </div>
-        <div className='card relative w-[250px] h-[300px] rotate-3 rounded-lg overflow-hidden'>
-          <div className='card-back relative w-full h-full z-0 bg-black'></div>
+        <div>
+          <Heading component='h3' className='mb-1'>
+            Family & Sport
+          </Heading>
+          <sub className='text-lg text-gray-400 leading-none'>
+            Father of one <span className='opacity-30'>//</span> Black belt (1st
+            dan) in Taekwondo
+          </sub>
+        </div>
+      </div>
+      <div className='relative flex flex-wrap gap-8 py-8'>
+        <div className='relative w-[320px] h-[400px] rounded-lg overflow-hidden'>
           <Image
             src={'/images/family.jpg'}
             fill
             objectFit='cover'
             alt=''
-            className='card-front z-10'
+            className='w-[calc(100%-40px)]'
           />
         </div>
-        <div className='card relative w-[250px] h-[300px] rotate-3 rounded-lg overflow-hidden'>
-          <div className='card-back relative w-full h-full z-0 bg-black'></div>
+        <div>
+          <Heading component='h3' className='mb-1'>
+            For fun
+          </Heading>
+          <sub className='text-lg text-gray-400 leading-none'>
+            Video & board game lover
+          </sub>
+        </div>
+      </div>
+      <div className='relative flex flex-wrap gap-8 py-8'>
+        <div className='relative w-[320px] h-[400px] rounded-lg overflow-hidden'>
           <Image
             src={'/images/family.jpg'}
             fill
             objectFit='cover'
             alt=''
-            className='card-front z-10'
+            className='w-[calc(100%-40px)]'
           />
+        </div>
+        <div>
+          <Heading component='h3' className='mb-1'>
+            Coding fun
+          </Heading>
+          <sub className='text-lg text-gray-400 leading-none'>
+            Dabble in creative coding from time to time
+          </sub>
         </div>
       </div>
     </section>
@@ -155,10 +146,7 @@ export default function Home() {
         {renderBehindTheCurtainSection()}
       </main>
       <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center py-8'>
-        <a
-          href='https://www.linkedin.com/in/ben-whomsley/'
-          target='_blank'
-        >
+        <a href='https://www.linkedin.com/in/ben-whomsley/' target='_blank'>
           <svg
             fill='#ffffff'
             height='16px'
