@@ -32,18 +32,17 @@ body {
 
 @keyframes move {
   0% {
-    offset-distance: 100%;
+    offset-distance: 0%;
   }
   100% {
-    offset-distance: 0%;
+    offset-distance: 100%;
   }
 }
 
 .char {
   --offset: calc(var(--char-index) * 1rem);
   offset-path: path('M 100,50 A 50,50 0 1,1 99.999,50');
-  /* offset-distance: var(--offset); */
   position: absolute;
   animation: move 10000ms infinite forwards linear;
-  animation-delay: calc(var(--char-index) * 0.5s);
+  animation-delay: calc(var(--char-index) * -0.5s);
 }

@@ -13,7 +13,9 @@ export default function Home() {
 
   const renderOpenForWorkBadge = () => (
     <div>
-      <span data-splitting>Open for work</span>
+      <span data-splitting className='font-bold'>
+        Open for work
+      </span>
     </div>
   )
 
