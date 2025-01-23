@@ -24,7 +24,7 @@ export const Experience = ({
           target='_blank'
           rel='noopener noreferrer'
           href={url}
-          className='flex gap-3 items-center hover:underline hover:text-yellow-300'
+          className='flex w-fit gap-3 items-center transition-all hover:text-yellow-300'
         >
           {title}{' '}
           <svg
@@ -55,20 +55,22 @@ export const Experience = ({
         <div className='mb-4 w-full sm:max-w-[500px]'>
           <Heading
             component='h3'
-            className='mb-1'
+            className='mb-2'
           >
             {renderTitleLink()}
           </Heading>
-          {roles.map((role, index) => {
-            return (
-              <p
-                key={index}
-                className='text-gray-300'
-              >
-                {role}
-              </p>
-            )
-          })}
+          <div className='mb-2'>
+            {roles.map((role, index) => {
+              return (
+                <p
+                  key={index}
+                  className='text-gray-300'
+                >
+                  {role}
+                </p>
+              )
+            })}
+          </div>
           <p className='text-gray-500'>{description}</p>
         </div>
         <div className='mb-4'>

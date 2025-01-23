@@ -15,6 +15,16 @@
   }
 }
 
+a {
+  @apply relative transition-all
+}
+a:before {
+  @apply absolute content-[''] top-[100%] w-0 h-[2px] bg-yellow-300 transition-all
+}
+a:hover{
+  @apply text-yellow-300 before:w-full
+}
+
 body {
   color: var(--foreground);
   background: var(--background);

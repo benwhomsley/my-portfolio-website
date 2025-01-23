@@ -12,7 +12,7 @@ export default function Home() {
   }, [])
 
   const renderOpenForWorkBadge = () => (
-    <div className='absolute top-10 left-10 w-[100px] h-[100px]'>
+    <div className='absolute top-10 left-10 z-20 w-[100px] h-[100px]'>
       <span
         data-splitting
         className='font-bold block w-[100px] h-[100px]'
@@ -23,7 +23,10 @@ export default function Home() {
   )
 
   const renderHeaderSection = () => (
-    <section className='relative min-h-screen w-full flex flex-col justify-center flex-wrap box-border p-4 sm:p-10'>
+    <section
+      id='about'
+      className='relative min-h-screen w-full flex flex-col justify-center flex-wrap box-border p-4 sm:p-10'
+    >
       {renderOpenForWorkBadge()}
       <Heading
         component='h1'
@@ -42,7 +45,10 @@ export default function Home() {
   )
 
   const renderExperienceSection = () => (
-    <section className='w-full flex flex-col justify-center p-4 sm:p-10 sm:py-20'>
+    <section
+      id='experience'
+      className='w-full flex flex-col justify-center p-4 sm:p-10 sm:py-20'
+    >
       <div className='flex-col gap-6 sm:flex-row mb-[100px] flex justify-between'>
         <div className='w-fit'>
           <Heading component='h2'>Experience</Heading>
@@ -97,11 +103,15 @@ export default function Home() {
     </section>
   )
 
-  const renderBehindTheCurtainSection = () => (
-    <section className='w-full flex flex-col justify-center p-4 sm:p-10'>
+  const renderBehindTheKeyboardSection = () => (
+    <section
+      id='behind'
+      className='w-full flex flex-col justify-center p-4 sm:p-10'
+    >
       <div className='mb-10 w-fit h-screen content-center'>
         <Heading component='h2'>
-          There&apos;s more to a person than just work, peak behind the curtain.
+          There&apos;s more to a person than just work, peak behind the
+          keyboard.
         </Heading>
       </div>
 
@@ -179,9 +189,22 @@ export default function Home() {
     <div className='max-w-[1200px] mx-auto min-h-screen font-[family-name:var(--font-geist-sans)]'>
       <main className='relative flex flex-col gap-8 overflow-hidden'>
         <div className='orb fixed inset-0 w-[600px] h-[600px] top-0 left-0 animate-hover'></div>
+        <nav className='fixed w-full max-w-[1200px] mx-auto z-10 flex justify-end p-4 backdrop-blur-sm bg-black/50'>
+          <ul className='flex flex-row gap-6 text-sm'>
+            <li>
+              <a href='#about'>About</a>
+            </li>
+            <li>
+              <a href='#experience'>Experience</a>
+            </li>
+            <li>
+              <a href='#behind'>Behind the keyoard</a>
+            </li>
+          </ul>
+        </nav>
         {renderHeaderSection()}
         {renderExperienceSection()}
-        {renderBehindTheCurtainSection()}
+        {renderBehindTheKeyboardSection()}
       </main>
       <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center py-8'>
         <a
