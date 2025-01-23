@@ -49,7 +49,7 @@ export const Experience = ({
   return (
     <div className='mb-24 flex flex-col justify-end sm:flex-row'>
       <div className='w-[200px]'>
-        <p className='text-gray-500 font-semibold text-sm'>{time}</p>
+        <p className='text-gray-500 font-semibold text-sm sm:pt-3'>{time}</p>
       </div>
       <div>
         <div className='mb-4 w-full sm:max-w-[500px]'>

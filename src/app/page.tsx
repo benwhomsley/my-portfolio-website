@@ -35,10 +35,14 @@ export default function Home() {
         A Javascript Engineer <span className='opacity-30'>//</span> Front End
         Developer <span className='opacity-30'>//</span> UX Developer.
       </sub>
+      <span className='font-normal opacity-50 absolute bottom-10 left-10'>
+        Based in the United Kingdom
+      </span>
     </section>
   )
+
   const renderExperienceSection = () => (
-    <section className='w-full flex flex-col justify-center p-4 sm:p-10'>
+    <section className='w-full flex flex-col justify-center p-4 sm:p-10 sm:py-20'>
       <div className='flex-col gap-6 sm:flex-row mb-[100px] flex justify-between'>
         <div className='w-fit'>
           <Heading component='h2'>Experience</Heading>
