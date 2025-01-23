@@ -17,17 +17,17 @@
 
 body {
   color: var(--foreground);
-  background: linear-gradient(45deg, var(--backgroundShade), var(--background));
+  background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .orb {
   background: rgb(21, 38, 142);
   background: radial-gradient(
-    circle,
-    rgba(21, 38, 142, 1) 0%,
-    rgba(21, 38, 142, 0.1) 100%
-  );
+    600px circle at 0px 0px,
+    rgba(29, 78, 216, 0.15),
+    transparent 80%
+  )
 }
 
 @keyframes move {
@@ -41,8 +41,11 @@ body {
 
 .char {
   --offset: calc(var(--char-index) * 1rem);
-  offset-path: path('M 100,50 A 50,50 0 1,1 99.999,50');
+  --start: 0;
+  --middle: 100;
+  --end:0;
+  offset-path: path('M50,0 A50,50 0 1,1 49.999,0');
   position: absolute;
   animation: move 10000ms infinite forwards linear;
-  animation-delay: calc(var(--char-index) * -0.5s);
+  animation-delay: calc(var(--char-index) * -0.7s);
 }

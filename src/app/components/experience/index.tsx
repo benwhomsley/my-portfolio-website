@@ -47,12 +47,12 @@ export const Experience = ({
     return title
   }
   return (
-    <div className='mb-24 flex justify-end'>
+    <div className='mb-24 flex flex-col justify-end sm:flex-row'>
       <div className='w-[200px]'>
         <p className='text-gray-500 font-semibold text-sm'>{time}</p>
       </div>
       <div>
-        <div className='mb-4 max-w-[500px]'>
+        <div className='mb-4 w-full sm:max-w-[500px]'>
           <Heading
             component='h3'
             className='mb-1'

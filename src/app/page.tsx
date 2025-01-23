@@ -12,16 +12,25 @@ export default function Home() {
   }, [])
 
   const renderOpenForWorkBadge = () => (
-    <div>
-      <span data-splitting className='font-bold'>
-        Open for work
+    <div className='absolute top-10 left-10 w-[100px] h-[100px]'>
+      <span
+        data-splitting
+        className='font-bold block w-[100px] h-[100px]'
+      >
+        Open * for * work *
       </span>
     </div>
   )
 
   const renderHeaderSection = () => (
-    <section className='min-h-screen w-full flex flex-col justify-center p-10'>
-      <Heading component='h1'>Hi, I&apos;m Ben.</Heading>
+    <section className='relative min-h-screen w-full flex flex-col justify-center flex-wrap box-border p-4 sm:p-10'>
+      {renderOpenForWorkBadge()}
+      <Heading
+        component='h1'
+        className='text-7xl'
+      >
+        Hi, I&apos;m Ben.
+      </Heading>
       <sub className='text-lg text-gray-400 leading-none'>
         A Javascript Engineer <span className='opacity-30'>//</span> Front End
         Developer <span className='opacity-30'>//</span> UX Developer.
@@ -29,8 +38,8 @@ export default function Home() {
     </section>
   )
   const renderExperienceSection = () => (
-    <section className='w-full flex flex-col justify-center p-10'>
-      <div className='mb-[100px] flex items-center justify-between'>
+    <section className='w-full flex flex-col justify-center p-4 sm:p-10'>
+      <div className='flex-col gap-6 sm:flex-row mb-[100px] flex justify-between'>
         <div className='w-fit'>
           <Heading component='h2'>Experience</Heading>
           <p className='text-lg text-gray-400 text-right leading-none'>
@@ -38,7 +47,7 @@ export default function Home() {
           </p>
         </div>
         <div>
-          <ul className='mb-2'>
+          <ul className='flex flex-row sm:flex-col mb-2'>
             <li className='px-[7px] py-[2px] rounded-md font-medium before:inline-block before:w-3 before:h-3 before:bg-yellow-300 before:rounded-full before:mr-[5px]'>
               Core tech
             </li>
@@ -70,7 +79,7 @@ export default function Home() {
         relatedTech={['AWS', 'Docker', 'Node']}
       />
       <Experience
-        time='2012 - 2027'
+        time='2012 - 2017'
         title='Creative agencies'
         description='During this time I worked across three separate creative agencies working on a range of different products and mediums, ranging from print collateral for real estate marketing, to performance management apps for professional sports organisations (Team GB Taekwondo, Saracens rugby club, ECB Cricket and many more), to custom social media management dashboards.'
         roles={[
@@ -85,7 +94,7 @@ export default function Home() {
   )
 
   const renderBehindTheCurtainSection = () => (
-    <section className='w-full flex flex-col justify-center p-10'>
+    <section className='w-full flex flex-col justify-center p-4 sm:p-10'>
       <div className='mb-10 w-fit h-screen content-center'>
         <Heading component='h2'>
           There&apos;s more to a person than just work, peak behind the curtain.
@@ -103,7 +112,10 @@ export default function Home() {
           />
         </div>
         <div>
-          <Heading component='h3' className='mb-1'>
+          <Heading
+            component='h3'
+            className='mb-1'
+          >
             Family & Sport
           </Heading>
           <sub className='text-lg text-gray-400 leading-none'>
@@ -123,7 +135,10 @@ export default function Home() {
           />
         </div>
         <div>
-          <Heading component='h3' className='mb-1'>
+          <Heading
+            component='h3'
+            className='mb-1'
+          >
             For fun
           </Heading>
           <sub className='text-lg text-gray-400 leading-none'>
@@ -142,7 +157,10 @@ export default function Home() {
           />
         </div>
         <div>
-          <Heading component='h3' className='mb-1'>
+          <Heading
+            component='h3'
+            className='mb-1'
+          >
             Coding fun
           </Heading>
           <sub className='text-lg text-gray-400 leading-none'>
@@ -154,16 +172,18 @@ export default function Home() {
   )
 
   return (
-    <div className='grid max-w-[1200px] mx-auto items-center min-h-screen font-[family-name:var(--font-geist-sans)]'>
-      <main className='flex flex-col gap-8 row-start-2 items-center sm:items-start'>
-        {renderOpenForWorkBadge()}
-        <div className='orb blur-3xl opacity-30 absolute w-[600px] h-[600px] top-0 left-0 rounded-full animate-hover'></div>
+    <div className='max-w-[1200px] mx-auto min-h-screen font-[family-name:var(--font-geist-sans)]'>
+      <main className='relative flex flex-col gap-8 overflow-hidden'>
+        <div className='orb fixed inset-0 w-[600px] h-[600px] top-0 left-0 animate-hover'></div>
         {renderHeaderSection()}
         {renderExperienceSection()}
         {renderBehindTheCurtainSection()}
       </main>
       <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center py-8'>
-        <a href='https://www.linkedin.com/in/ben-whomsley/' target='_blank'>
+        <a
+          href='https://www.linkedin.com/in/ben-whomsley/'
+          target='_blank'
+        >
           <svg
             fill='#ffffff'
             height='16px'
