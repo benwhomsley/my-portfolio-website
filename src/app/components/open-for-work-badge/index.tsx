@@ -1,6 +1,6 @@
 const OpenForWorkBadge = () => {
   return (
-    <div className='absolute top-10 left-10 z-20 w-[100px] h-[100px]'>
+    <div className='absolute top-10 left-5 z-20 w-[100px] h-[100px]'>
       <svg
         height='100'
         width='100'
