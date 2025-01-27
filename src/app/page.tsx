@@ -1,33 +1,15 @@
-'use client'
-
 import Image from 'next/image'
 import Heading from './components/heading'
 import Experience from './components/experience'
-import Splitting from 'splitting'
-import { useEffect } from 'react'
+import OpenForWorkBadge from './components/open-for-work-badge'
 
 export default function Home() {
-  useEffect(() => {
-    Splitting()
-  }, [])
-
-  const renderOpenForWorkBadge = () => (
-    <div className='absolute top-10 left-10 z-20 w-[100px] h-[100px]'>
-      <span
-        data-splitting
-        className='font-bold block w-[100px] h-[100px]'
-      >
-        Open * for * work *
-      </span>
-    </div>
-  )
-
   const renderHeaderSection = () => (
     <section
       id='about'
       className='relative min-h-screen w-full flex flex-col justify-center flex-wrap box-border p-4 sm:p-10'
     >
-      {renderOpenForWorkBadge()}
+      <OpenForWorkBadge />{' '}
       <Heading
         component='h1'
         className='text-7xl'
@@ -190,7 +172,7 @@ export default function Home() {
     <div className='max-w-[1200px] mx-auto min-h-screen font-[family-name:var(--font-geist-sans)]'>
       <main className='relative flex flex-col gap-8 overflow-hidden'>
         <div className='orb fixed inset-0 w-[600px] h-[600px] top-0 left-0 animate-hover'></div>
-        <nav className='fixed w-full max-w-[1200px] mx-auto z-10 flex justify-end p-4 backdrop-blur-sm bg-black/50'>
+        <nav className='fixed w-full max-w-[1200px] mx-auto z-10 flex justify-end p-4 backdrop-blur-sm bg-black/30'>
           <ul className='flex flex-row gap-6 text-sm'>
             <li>
               <a href='#about'>About</a>
