@@ -54,7 +54,7 @@ export default function Home() {
         time='2022 - present'
         title='Studentbeans / Pion'
         url='https://studentbeans.com'
-        description='Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.'
+        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
         roles={[
           'Senior Javascript Engineer // ~ 7 months',
           ' Javascript Engineer // 2 years 5 months',
@@ -66,7 +66,7 @@ export default function Home() {
         time='2017 - 2022'
         title='Electroneum'
         url='https://electroneum.com'
-        description='Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.'
+        description='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
         roles={['UX Developer // ~ 5 years']}
         coreTech={['Angular', 'Ionic', 'SASS', 'HTML', 'Jest', 'Git']}
         relatedTech={['AWS', 'Docker', 'Node']}
