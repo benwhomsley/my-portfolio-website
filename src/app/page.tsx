@@ -35,8 +35,9 @@ export default function Home() {
         Hi, I&apos;m Ben.
       </Heading>
       <sub className='text-lg text-gray-400 leading-none'>
-        A Javascript Engineer <span className='opacity-30'>//</span> Front End
-        Developer <span className='opacity-30'>//</span> UX Developer.
+        A Javascript Engineer <span className='opacity-30'>&#47;&#47;</span>{' '}
+        Front End Developer <span className='opacity-30'>&#47;&#47;</span> UX
+        Developer.
       </sub>
       <span className='font-normal opacity-50 absolute bottom-10 left-10'>
         Based in the United Kingdom
@@ -133,12 +134,12 @@ export default function Home() {
             Family & Sport
           </Heading>
           <sub className='text-lg text-gray-400 leading-none'>
-            Father of one <span className='opacity-30'>//</span> Black belt (1st
-            dan) in Taekwondo
+            Father of one <span className='opacity-30'>&#47;&#47;</span> Black
+            belt (1st dan) in Taekwondo
           </sub>
         </div>
       </div>
-      <div className='relative flex flex-wrap gap-8 py-8'>
+      {/* <div className='relative flex flex-wrap gap-8 py-8'>
         <div className='relative w-[320px] h-[400px] rounded-lg overflow-hidden'>
           <Image
             src={'/images/family.jpg'}
@@ -181,7 +182,7 @@ export default function Home() {
             Dabble in creative coding from time to time
           </sub>
         </div>
-      </div>
+      </div> */}
     </section>
   )
 
