@@ -21,7 +21,7 @@ export default function Home() {
         Front End Developer <span className='opacity-30'>&#47;&#47;</span> UX
         Developer.
       </sub>
-      <span className='font-normal opacity-50 absolute bottom-10 left-10'>
+      <span className='font-normal opacity-50 absolute bottom-10 left-5'>
         Based in the United Kingdom
       </span>
     </section>
