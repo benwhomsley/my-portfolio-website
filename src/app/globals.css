@@ -59,3 +59,9 @@ body {
   animation: move 10000ms infinite forwards linear;
   animation-delay: calc(var(--char-index) * -0.7s);
 }
+
+nav {
+  background: radial-gradient(transparent 1px,var(--background) 1px);
+  background-size: 4px 4px;
+  mask: linear-gradient(#000 80%,transparent)
+}

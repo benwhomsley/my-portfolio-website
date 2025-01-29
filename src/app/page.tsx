@@ -172,7 +172,7 @@ export default function Home() {
     <div className='max-w-[1200px] mx-auto min-h-screen font-[family-name:var(--font-geist-sans)]'>
       <main className='relative flex flex-col gap-8 overflow-hidden'>
         <div className='orb fixed inset-0 w-[600px] h-[600px] top-0 left-0 animate-hover'></div>
-        <nav className='fixed w-full max-w-[1200px] mx-auto z-10 flex justify-end p-4 backdrop-blur-sm bg-black/30'>
+        <nav className='fixed w-full max-w-[1200px] mx-auto z-10 flex justify-end p-4 backdrop-blur-sm bg-black/20'>
           <ul className='flex flex-row gap-6 text-sm'>
             <li>
               <a href='#about'>About</a>
