@@ -98,14 +98,14 @@ export default function Home() {
         >
           Projects
         </Heading>
-        <div className=' grid grid-cols-5 gap-6'>
-          <div className='relative h-[500px] rounded-xl overflow-hidden col-span-3 p-4'>
+        <div className='grid grid-cols-5 gap-6'>
+          <div className='relative h-[250px] sm:h-[500px] rounded-xl overflow-hidden col-span-5 sm:col-span-3 p-4'>
             <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
               Website
             </span>
             <Heading
               component='h5'
-              className='z-20 relative w-1/2'
+              className='z-20 relative w-2/3 sm:w-1/2'
             >
               Taking studentbeans.com from tortoise to hare
             </Heading>
@@ -118,7 +118,7 @@ export default function Home() {
               className='z-0'
             />
           </div>
-          <div className='relative h-[500px] rounded-xl overflow-hidden col-span-2 p-4'>
+          <div className='relative h-[250px] sm:h-[500px] rounded-xl overflow-hidden col-span-5 sm:col-span-2 p-4'>
             <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
               Website
             </span>
@@ -138,7 +138,7 @@ export default function Home() {
             />
           </div>
 
-          <div className='relative h-[500px] rounded-xl overflow-hidden col-span-2 p-4'>
+          <div className='relative h-[250px] sm:h-[500px] rounded-xl overflow-hidden col-span-5 sm:col-span-2 p-4'>
             <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
               Website
             </span>
@@ -157,13 +157,13 @@ export default function Home() {
               className='z-0'
             />
           </div>
-          <div className='relative h-[500px] rounded-xl overflow-hidden col-span-3 p-4'>
+          <div className='relative h-[250px] sm:h-[500px] rounded-xl overflow-hidden col-span-5 sm:col-span-3 p-4'>
             <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
               Website
             </span>
             <Heading
               component='h5'
-              className='z-20 relative w-1/2'
+              className='z-20 relative w-2/3 sm:w-1/2'
             >
               Taking studentbeans.com from tortoise to hare
             </Heading>
