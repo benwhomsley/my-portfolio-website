@@ -9,7 +9,7 @@ export default function Home() {
       id='about'
       className='relative min-h-screen w-full flex flex-col justify-center flex-wrap box-border p-4 sm:p-10'
     >
-      <OpenForWorkBadge />{' '}
+      <OpenForWorkBadge />
       <Heading
         component='h1'
         className='text-7xl'
@@ -85,6 +85,101 @@ export default function Home() {
       />
     </section>
   )
+
+  const renderProjectsSection = () => {
+    return (
+      <section
+        id='projects'
+        className='w-full justify-center p-4 sm:p-10 sm:py-20'
+      >
+        <Heading
+          component='h2'
+          className='mb-[100px]'
+        >
+          Projects
+        </Heading>
+        <div className=' grid grid-cols-5 gap-6'>
+          <div className='relative h-[500px] rounded-xl overflow-hidden col-span-3 p-4'>
+            <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
+              Website
+            </span>
+            <Heading
+              component='h5'
+              className='z-20 relative w-1/2'
+            >
+              Taking studentbeans.com from tortoise to hare
+            </Heading>
+            <div className='dot-gradient absolute w-full h-1/3 z-10 top-0 left-0'></div>
+            <Image
+              src={'/images/test.jpg'}
+              fill
+              objectFit='cover'
+              alt=''
+              className='z-0'
+            />
+          </div>
+          <div className='relative h-[500px] rounded-xl overflow-hidden col-span-2 p-4'>
+            <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
+              Website
+            </span>
+            <Heading
+              component='h5'
+              className='z-20 relative w-2/3'
+            >
+              Taking studentbeans.com from tortoise to hare
+            </Heading>
+            <div className='dot-gradient absolute w-full h-1/3 z-10 top-0 left-0'></div>
+            <Image
+              src={'/images/test.jpg'}
+              fill
+              objectFit='cover'
+              alt=''
+              className='z-0'
+            />
+          </div>
+
+          <div className='relative h-[500px] rounded-xl overflow-hidden col-span-2 p-4'>
+            <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
+              Website
+            </span>
+            <Heading
+              component='h5'
+              className='z-20 relative w-2/3'
+            >
+              Taking studentbeans.com from tortoise to hare
+            </Heading>
+            <div className='dot-gradient absolute w-full h-1/3 z-10 top-0 left-0'></div>
+            <Image
+              src={'/images/test.jpg'}
+              fill
+              objectFit='cover'
+              alt=''
+              className='z-0'
+            />
+          </div>
+          <div className='relative h-[500px] rounded-xl overflow-hidden col-span-3 p-4'>
+            <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
+              Website
+            </span>
+            <Heading
+              component='h5'
+              className='z-20 relative w-1/2'
+            >
+              Taking studentbeans.com from tortoise to hare
+            </Heading>
+            <div className='dot-gradient absolute w-full h-1/3 z-10 top-0 left-0'></div>
+            <Image
+              src={'/images/test.jpg'}
+              fill
+              objectFit='cover'
+              alt=''
+              className='z-0'
+            />
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   const renderBehindTheKeyboardSection = () => (
     <section
@@ -172,7 +267,8 @@ export default function Home() {
     <div className='max-w-[1200px] mx-auto min-h-screen font-[family-name:var(--font-geist-sans)]'>
       <main className='relative flex flex-col gap-8 overflow-hidden'>
         <div className='orb fixed inset-0 w-[600px] h-[600px] top-0 left-0 animate-hover'></div>
-        <nav className='fixed w-full max-w-[1200px] mx-auto z-10 flex justify-end p-4 backdrop-blur-sm bg-black/20'>
+        <nav className='fixed w-full max-w-[1200px] mx-auto z-50 flex justify-end p-4 pb-9'>
+          <div className='dot-gradient backdrop-blur-lg absolute top-0 left-0 w-full h-full'></div>
           <ul className='flex flex-row gap-6 text-sm'>
             <li>
               <a href='#about'>About</a>
@@ -187,6 +283,7 @@ export default function Home() {
         </nav>
         {renderHeaderSection()}
         {renderExperienceSection()}
+        {renderProjectsSection()}
         {renderBehindTheKeyboardSection()}
       </main>
       <footer className='row-start-3 flex gap-6 flex-wrap items-center justify-center py-8'>

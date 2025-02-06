@@ -79,7 +79,7 @@ export const Experience = ({
               return (
                 <li
                   key={index}
-                  className='px-[7px] py-[2px] bg-yellow-300 text-yellow-950 rounded-md text-xs font-semibold select-none'
+                  className='px-[8px] py-[2px] bg-yellow-300 text-yellow-950 rounded-xl text-xs font-semibold select-none'
                 >
                   {name}
                 </li>
@@ -92,7 +92,7 @@ export const Experience = ({
               return (
                 <li
                   key={index}
-                  className='px-[7px] py-[2px] bg-yellow-50 text-yellow-950 rounded-md text-xs font-semibold select-none'
+                  className='px-[8px] py-[2px] bg-yellow-50 text-yellow-950 rounded-xl text-xs font-semibold select-none'
                 >
                   {name}
                 </li>
