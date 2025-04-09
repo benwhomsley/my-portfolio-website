@@ -12,7 +12,7 @@ export const Experience = ({
   time: string
   title: string
   url?: string
-  roles: string[]
+  roles: {name:string, duration:string}[]
   description: string
   coreTech: string[]
   relatedTech: string[]
@@ -47,7 +47,7 @@ export const Experience = ({
     return title
   }
   return (
-    <div className='mb-24 flex flex-col justify-end sm:flex-row'>
+    <div className='mt-24 flex flex-col justify-end sm:flex-row'>
       <div className='w-[200px]'>
         <p className='text-gray-500 font-semibold text-sm sm:pt-3'>{time}</p>
       </div>
@@ -66,7 +66,7 @@ export const Experience = ({
                   key={index}
                   className='text-gray-300'
                 >
-                  {role}
+                  {role.name} <span className="text-yellow-300">&#47;&#47;</span> {role.duration}
                 </p>
               )
             })}

@@ -18,11 +18,17 @@
 a {
   @apply relative transition-all
 }
+
+/* a:after {
+  @apply absolute content-[''] top-[100%] right-0 w-full h-[1px] bg-white transition-all
+} */
+
 a:before {
-  @apply absolute content-[''] top-[100%] w-0 h-[2px] bg-yellow-300 transition-all
+  @apply absolute content-[''] top-[100%] left-0 w-0 h-[2px] bg-yellow-300 transition-all
 }
-a:hover{
-  @apply text-yellow-300 before:w-full
+
+a:hover {
+  @apply text-yellow-300 before:w-full after:w-0
 }
 
 body {
@@ -33,17 +39,16 @@ body {
 
 .orb {
   background: rgb(21, 38, 142);
-  background: radial-gradient(
-    600px circle at 0px 0px,
-    rgba(29, 78, 216, 0.15),
-    transparent 80%
-  )
+  background: radial-gradient(600px circle at 0px 0px,
+      rgba(29, 78, 216, 0.15),
+      transparent 80%)
 }
 
 @keyframes move {
   0% {
     offset-distance: 0%;
   }
+
   100% {
     offset-distance: 100%;
   }
@@ -53,7 +58,7 @@ body {
   --offset: calc(var(--char-index) * 1rem);
   --start: 0;
   --middle: 100;
-  --end:0;
+  --end: 0;
   offset-path: path('M50,0 A50,50 0 1,1 49.999,0');
   position: absolute;
   animation: move 10000ms infinite forwards linear;
