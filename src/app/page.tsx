@@ -88,100 +88,100 @@ export default function Home() {
     </section>
   )
 
-  const renderProjectsSection = () => {
-    return (
-      <section
-        id='projects'
-        className='w-full justify-center p-4 sm:p-10 sm:py-20'
-      >
-        <Heading
-          component='h2'
-          className='mb-[100px]'
-        >
-          Projects
-        </Heading>
-        <div className='grid grid-cols-5 gap-6'>
-          <div className='relative h-[250px] sm:h-[500px] rounded-xl overflow-hidden col-span-5 sm:col-span-3 p-4'>
-            <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
-              Website
-            </span>
-            <Heading
-              component='h5'
-              className='z-20 relative w-2/3 sm:w-1/2'
-            >
-              Taking studentbeans.com from tortoise to hare
-            </Heading>
-            <div className='dot-gradient absolute w-full h-1/3 z-10 top-0 left-0'></div>
-            <Image
-              src={'/images/test.jpg'}
-              fill
-              objectFit='cover'
-              alt=''
-              className='z-0'
-            />
-          </div>
-          <div className='relative h-[250px] sm:h-[500px] rounded-xl overflow-hidden col-span-5 sm:col-span-2 p-4'>
-            <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
-              Website
-            </span>
-            <Heading
-              component='h5'
-              className='z-20 relative w-2/3'
-            >
-              Taking studentbeans.com from tortoise to hare
-            </Heading>
-            <div className='dot-gradient absolute w-full h-1/3 z-10 top-0 left-0'></div>
-            <Image
-              src={'/images/test.jpg'}
-              fill
-              objectFit='cover'
-              alt=''
-              className='z-0'
-            />
-          </div>
+  // const renderProjectsSection = () => {
+  //   return (
+  //     <section
+  //       id='projects'
+  //       className='w-full justify-center p-4 sm:p-10 sm:py-20'
+  //     >
+  //       <Heading
+  //         component='h2'
+  //         className='mb-[100px]'
+  //       >
+  //         Projects
+  //       </Heading>
+  //       <div className='grid grid-cols-5 gap-6'>
+  //         <div className='relative h-[250px] sm:h-[500px] rounded-xl overflow-hidden col-span-5 sm:col-span-3 p-4'>
+  //           <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
+  //             Website
+  //           </span>
+  //           <Heading
+  //             component='h5'
+  //             className='z-20 relative w-2/3 sm:w-1/2'
+  //           >
+  //             Taking studentbeans.com from tortoise to hare
+  //           </Heading>
+  //           <div className='dot-gradient absolute w-full h-1/3 z-10 top-0 left-0'></div>
+  //           <Image
+  //             src={'/images/test.jpg'}
+  //             fill
+  //             objectFit='cover'
+  //             alt=''
+  //             className='z-0'
+  //           />
+  //         </div>
+  //         <div className='relative h-[250px] sm:h-[500px] rounded-xl overflow-hidden col-span-5 sm:col-span-2 p-4'>
+  //           <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
+  //             Website
+  //           </span>
+  //           <Heading
+  //             component='h5'
+  //             className='z-20 relative w-2/3'
+  //           >
+  //             Taking studentbeans.com from tortoise to hare
+  //           </Heading>
+  //           <div className='dot-gradient absolute w-full h-1/3 z-10 top-0 left-0'></div>
+  //           <Image
+  //             src={'/images/test.jpg'}
+  //             fill
+  //             objectFit='cover'
+  //             alt=''
+  //             className='z-0'
+  //           />
+  //         </div>
 
-          <div className='relative h-[250px] sm:h-[500px] rounded-xl overflow-hidden col-span-5 sm:col-span-2 p-4'>
-            <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
-              Website
-            </span>
-            <Heading
-              component='h5'
-              className='z-20 relative w-2/3'
-            >
-              Taking studentbeans.com from tortoise to hare
-            </Heading>
-            <div className='dot-gradient absolute w-full h-1/3 z-10 top-0 left-0'></div>
-            <Image
-              src={'/images/test.jpg'}
-              fill
-              objectFit='cover'
-              alt=''
-              className='z-0'
-            />
-          </div>
-          <div className='relative h-[250px] sm:h-[500px] rounded-xl overflow-hidden col-span-5 sm:col-span-3 p-4'>
-            <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
-              Website
-            </span>
-            <Heading
-              component='h5'
-              className='z-20 relative w-2/3 sm:w-1/2'
-            >
-              Taking studentbeans.com from tortoise to hare
-            </Heading>
-            <div className='dot-gradient absolute w-full h-1/3 z-10 top-0 left-0'></div>
-            <Image
-              src={'/images/test.jpg'}
-              fill
-              objectFit='cover'
-              alt=''
-              className='z-0'
-            />
-          </div>
-        </div>
-      </section>
-    )
-  }
+  //         <div className='relative h-[250px] sm:h-[500px] rounded-xl overflow-hidden col-span-5 sm:col-span-2 p-4'>
+  //           <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
+  //             Website
+  //           </span>
+  //           <Heading
+  //             component='h5'
+  //             className='z-20 relative w-2/3'
+  //           >
+  //             Taking studentbeans.com from tortoise to hare
+  //           </Heading>
+  //           <div className='dot-gradient absolute w-full h-1/3 z-10 top-0 left-0'></div>
+  //           <Image
+  //             src={'/images/test.jpg'}
+  //             fill
+  //             objectFit='cover'
+  //             alt=''
+  //             className='z-0'
+  //           />
+  //         </div>
+  //         <div className='relative h-[250px] sm:h-[500px] rounded-xl overflow-hidden col-span-5 sm:col-span-3 p-4'>
+  //           <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
+  //             Website
+  //           </span>
+  //           <Heading
+  //             component='h5'
+  //             className='z-20 relative w-2/3 sm:w-1/2'
+  //           >
+  //             Taking studentbeans.com from tortoise to hare
+  //           </Heading>
+  //           <div className='dot-gradient absolute w-full h-1/3 z-10 top-0 left-0'></div>
+  //           <Image
+  //             src={'/images/test.jpg'}
+  //             fill
+  //             objectFit='cover'
+  //             alt=''
+  //             className='z-0'
+  //           />
+  //         </div>
+  //       </div>
+  //     </section>
+  //   )
+  // }
 
   const renderProjectsSection2 = () => (
     <section
