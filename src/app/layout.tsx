@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Ben Whomsley Portfolio',
+  title: 'Ben Whomsley',
   description:
     'Showcase of my design and software engineering projects & and insight into my experience and personal life.',
 }

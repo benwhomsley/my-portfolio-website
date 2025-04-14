@@ -1,34 +1,57 @@
-import Image from 'next/image'
-import Heading from './components/heading'
-import Experience from './components/experience'
-import OpenForWorkBadge from './components/open-for-work-badge'
-import Nav from './components/nav'
-import Footer from './components/footer'
+import Image from "next/image"
+import Heading from "./components/heading"
+import Experience from "./components/experience"
+import Nav from "./components/nav"
+import Footer from "./components/footer"
+import Header from "./components/header"
+
+type Project = {
+  label: string
+  title: string
+  url: string
+  image: string
+  icon: string
+}
+
+const projects: Project[] = [
+  {
+    label: "Student Beans",
+    title: "The #1 student loyalty network",
+    url: "https://studentbeans.com",
+    image: "/images/projects/studentbeans.png",
+    icon: "/images/sb-favicon.ico",
+  },
+  {
+    label: "Worlde Unlimited",
+    title: "Wordle but with access to all the levels",
+    url: "https://tranquil-croquembouche-4cdce0.netlify.app/",
+    image: "/images/projects/wordle.png",
+    icon: "/images/sb-favicon.ico",
+  },
+  {
+    label: "Electroneum",
+    title: "A revolutionary new digital ecosystem",
+    url: "https://electroneum.com/",
+    image: "/images/projects/electroneum.png",
+    icon: "/images/sb-favicon.ico",
+  },
+  {
+    label: "Othello",
+    title: "Play Othello online against the computer or a friend (locally)",
+    url: "https://othello.netlify.app/",
+    image: "/images/test.jpg",
+    icon: "/images/sb-favicon.ico",
+  },
+  {
+    label: "Drone photography",
+    title: "A media companies brochure site",
+    url: "https://effortless-maamoul-af63e9.netlify.app/",
+    image: "/images/test.jpg",
+    icon: "/images/sb-favicon.ico",
+  },
+]
 
 export default function Home() {
-  const renderHeaderSection = () => (
-    <section
-      id="about"
-      className="relative min-h-screen w-full flex flex-col justify-center flex-wrap box-border p-4 sm:p-10"
-    >
-      <OpenForWorkBadge />
-      <Heading
-        component='h1'
-        className='text-7xl'
-      >
-        Hi, I&apos;m Ben.
-      </Heading>
-      <sub className='text-lg text-gray-400 leading-none'>
-        A Javascript Engineer <span className='text-yellow-300'>&#47;&#47;</span>{' '}
-        Front End Developer <span className='text-yellow-300'>&#47;&#47;</span> UX
-        Developer.
-      </sub>
-      <span className='font-normal opacity-50 absolute bottom-10 left-5'>
-        Based in the United Kingdom
-      </span>
-    </section>
-  )
-
   const renderExperienceSection = () => (
     <section
       id="experience"
@@ -88,201 +111,59 @@ export default function Home() {
     </section>
   )
 
-  // const renderProjectsSection = () => {
-  //   return (
-  //     <section
-  //       id='projects'
-  //       className='w-full justify-center p-4 sm:p-10 sm:py-20'
-  //     >
-  //       <Heading
-  //         component='h2'
-  //         className='mb-[100px]'
-  //       >
-  //         Projects
-  //       </Heading>
-  //       <div className='grid grid-cols-5 gap-6'>
-  //         <div className='relative h-[250px] sm:h-[500px] rounded-xl overflow-hidden col-span-5 sm:col-span-3 p-4'>
-  //           <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
-  //             Website
-  //           </span>
-  //           <Heading
-  //             component='h5'
-  //             className='z-20 relative w-2/3 sm:w-1/2'
-  //           >
-  //             Taking studentbeans.com from tortoise to hare
-  //           </Heading>
-  //           <div className='dot-gradient absolute w-full h-1/3 z-10 top-0 left-0'></div>
-  //           <Image
-  //             src={'/images/test.jpg'}
-  //             fill
-  //             objectFit='cover'
-  //             alt=''
-  //             className='z-0'
-  //           />
-  //         </div>
-  //         <div className='relative h-[250px] sm:h-[500px] rounded-xl overflow-hidden col-span-5 sm:col-span-2 p-4'>
-  //           <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
-  //             Website
-  //           </span>
-  //           <Heading
-  //             component='h5'
-  //             className='z-20 relative w-2/3'
-  //           >
-  //             Taking studentbeans.com from tortoise to hare
-  //           </Heading>
-  //           <div className='dot-gradient absolute w-full h-1/3 z-10 top-0 left-0'></div>
-  //           <Image
-  //             src={'/images/test.jpg'}
-  //             fill
-  //             objectFit='cover'
-  //             alt=''
-  //             className='z-0'
-  //           />
-  //         </div>
+  const renderProject = (project: Project, index: number) => {
+    const styles = (index+1) === 2 || (index+1) % 3 === 0 ? "sm:col-span-2" : "sm:col-span-3"
+    return (
+      <a
+        key={index}
+        href={project.url}
+        target="_blank"
+        rel="nofollow"
+        className={`relative rounded-xl overflow-hidden p-4 h-[250px] sm:h-[500px] col-span-5 ${styles}`}
+      >
+        <div className="flex gap-2 relative z-20 text-xs font-medium uppercase tracking-wider mb-2">
+          <Image
+            className="h-fit"
+            src={project.icon}
+            alt=""
+            width={16}
+            height={16}
+          />
+          {project.label}
+        </div>
+        <Heading component="h5" className="z-20 relative w-2/3 sm:w-1/2 shadow-md">
+          {project.title}
+        </Heading>
+        <div className="dot-gradient absolute w-full h-1/3 z-10 top-0 left-0"></div>
+        <Image
+          src={project.image}
+          fill
+          sizes="50vw"
+          style={{ objectFit: "cover" }}
+          alt=""
+          className="z-0"
+        />
+      </a>
+    )
+  }
 
-  //         <div className='relative h-[250px] sm:h-[500px] rounded-xl overflow-hidden col-span-5 sm:col-span-2 p-4'>
-  //           <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
-  //             Website
-  //           </span>
-  //           <Heading
-  //             component='h5'
-  //             className='z-20 relative w-2/3'
-  //           >
-  //             Taking studentbeans.com from tortoise to hare
-  //           </Heading>
-  //           <div className='dot-gradient absolute w-full h-1/3 z-10 top-0 left-0'></div>
-  //           <Image
-  //             src={'/images/test.jpg'}
-  //             fill
-  //             objectFit='cover'
-  //             alt=''
-  //             className='z-0'
-  //           />
-  //         </div>
-  //         <div className='relative h-[250px] sm:h-[500px] rounded-xl overflow-hidden col-span-5 sm:col-span-3 p-4'>
-  //           <span className='block relative z-20 text-xs uppercase tracking-wider mb-2'>
-  //             Website
-  //           </span>
-  //           <Heading
-  //             component='h5'
-  //             className='z-20 relative w-2/3 sm:w-1/2'
-  //           >
-  //             Taking studentbeans.com from tortoise to hare
-  //           </Heading>
-  //           <div className='dot-gradient absolute w-full h-1/3 z-10 top-0 left-0'></div>
-  //           <Image
-  //             src={'/images/test.jpg'}
-  //             fill
-  //             objectFit='cover'
-  //             alt=''
-  //             className='z-0'
-  //           />
-  //         </div>
-  //       </div>
-  //     </section>
-  //   )
-  // }
-
-  const renderProjectsSection2 = () => (
-    <section
-      id="projects"
-      className="w-full flex flex-col justify-center p-4 sm:p-10 sm:py-20"
-    >
-      <Heading component="h2" className="mb-10">
-        Projects
-      </Heading>
-      <ul>
-        <li className="mb-5">
-          <div className="flex gap-1 items-center">
-            <Image
-              className=""
-              src="/images/sb-favicon.ico"
-              alt=""
-              width={16}
-              height={16}
-            />
-            <a className="font-bold" href="https://studenbeans.com/">
-              Student Beans
-            </a>
-          </div>
-          <p className="text-gray-500">The #1 student loyalty network.</p>
-        </li>
-        <li className="mb-5">
-          <div className="flex gap-1 items-center">
-            <Image
-              className=""
-              src="/images/sb-favicon.ico"
-              alt=""
-              width={16}
-              height={16}
-            />
-            <a
-              className="font-bold"
-              href="https://tranquil-croquembouche-4cdce0.netlify.app/"
-            >
-              Worlde Unlimited
-            </a>
-          </div>
-
-          <p className="text-gray-500">
-            Wordle but with access to all the levels.
-          </p>
-        </li>
-        <li className="mb-5">
-          <div className="flex gap-1 items-center">
-            <Image
-              className=""
-              src="/images/sb-favicon.ico"
-              alt=""
-              width={16}
-              height={16}
-            />
-            <a className="font-bold" href="https://electroneum.com/">
-              Electroneum
-            </a>
-          </div>
-          <p className="text-gray-500">
-            A revolutionary new digital ecosystem.
-          </p>
-        </li>
-        <li className="mb-5">
-          <div className="flex gap-1 items-center">
-            <Image
-              className=""
-              src="/images/sb-favicon.ico"
-              alt=""
-              width={16}
-              height={16}
-            />
-            <a className="font-bold" href="https://othello.netlify.app/">
-              Othello
-            </a>
-          </div>
-          <p className="text-gray-500">
-            Play Othello online against the computer or a friend (locally).
-          </p>
-        </li>
-        <li className="mb-5">
-          <div className="flex gap-1 items-center">
-            <Image
-              className=""
-              src="/images/sb-favicon.ico"
-              alt=""
-              width={16}
-              height={16}
-            />
-            <a
-              className="font-bold"
-              href="https://effortless-maamoul-af63e9.netlify.app/"
-            >
-              Drone photography
-            </a>
-          </div>
-          <p className="text-gray-500">A media companies brochure site.</p>
-        </li>
-      </ul>
-    </section>
-  )
+  const renderProjectsSection = () => {
+    return (
+      <section
+        id="projects"
+        className="w-full justify-center p-4 sm:p-10 sm:py-20"
+      >
+        <Heading component="h2" className="mb-[100px]">
+          Projects
+        </Heading>
+        <div className="grid grid-cols-5 gap-6">
+          {projects.map((project, index) => {
+            return renderProject(project, index)
+          })}
+        </div>
+      </section>
+    )
+  }
 
   const renderBehindTheKeyboardSection = () => (
     <section
@@ -301,7 +182,8 @@ export default function Home() {
           <Image
             src={"/images/family.jpg"}
             fill
-            objectFit="cover"
+            sizes="50vw"
+            style={{ objectFit: "cover" }}
             alt=""
             className="w-[calc(100%-40px)]"
           />
@@ -310,9 +192,9 @@ export default function Home() {
           <Heading component="h3" className="mb-1">
             Family & Sport
           </Heading>
-          <sub className='text-lg text-gray-400 leading-none'>
-            Father of one <span className='text-yellow-300'>&#47;&#47;</span> Black
-            belt (1st dan) in Taekwondo
+          <sub className="text-lg text-gray-400 leading-none">
+            Father of one <span className="text-yellow-300">&#47;&#47;</span>{" "}
+            Black belt (1st dan) in Taekwondo
           </sub>
         </div>
       </div>
@@ -362,9 +244,9 @@ export default function Home() {
       <main className="relative flex flex-col gap-8 overflow-hidden">
         <div className="orb pointer-events-none z-20 fixed inset-0 w-[600px] h-[600px] top-0 left-0 animate-hover"></div>
         <Nav />
-        {renderHeaderSection()}
+        <Header />
         {renderExperienceSection()}
-        {renderProjectsSection2()}
+        {renderProjectsSection()}
         {renderBehindTheKeyboardSection()}
       </main>
       <Footer />
