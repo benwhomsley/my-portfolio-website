@@ -39,14 +39,14 @@ const projects: Project[] = [
     label: "Othello",
     title: "Play Othello online against the computer or a friend (locally)",
     url: "https://othello.netlify.app/",
-    image: "/images/test.jpg",
+    image: "/images/projects/othello.png",
     icon: "/images/sb-favicon.ico",
   },
   {
     label: "Drone photography",
     title: "A media companies brochure site",
     url: "https://effortless-maamoul-af63e9.netlify.app/",
-    image: "/images/test.jpg",
+    image: "/images/projects/drone.png",
     icon: "/images/sb-favicon.ico",
   },
 ]
@@ -131,10 +131,10 @@ export default function Home() {
           />
           {project.label}
         </div>
-        <Heading component="h5" className="z-20 relative w-2/3 sm:w-1/2 shadow-md">
+        <Heading component="h5" className="z-20 relative w-2/3 sm:w-1/2">
           {project.title}
         </Heading>
-        <div className="dot-gradient absolute w-full h-1/3 z-10 top-0 left-0"></div>
+        {/* <div className="dot-gradient absolute w-full h-1/3 z-10 top-0 left-0"></div> */}
         <Image
           src={project.image}
           fill
