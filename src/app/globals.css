@@ -67,6 +67,6 @@ body {
 
 .dot-gradient {
   background: radial-gradient(transparent 1px,var(--background) 1px);
-  background-size: 4px 4px;
+  /* background-size: 4px 4px; */
   mask: linear-gradient(#000 20%,transparent)
 }

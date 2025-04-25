@@ -9,6 +9,9 @@ export const Nav = () => {
           <a className="font-medium" href="#experience">Experience</a>
         </li>
         <li>
+          <a className="font-medium" href="#projects">Projects</a>
+        </li>
+        <li>
           <a className="font-medium" href="#behind">Behind the keyoard</a>
         </li>
       </ul>

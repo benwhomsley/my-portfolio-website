@@ -19,35 +19,42 @@ const projects: Project[] = [
     title: "The #1 student loyalty network",
     url: "https://studentbeans.com",
     image: "/images/projects/studentbeans.png",
-    icon: "/images/sb-favicon.ico",
+    icon: "/images/projects/icons/studentbeans.ico",
   },
   {
     label: "Worlde Unlimited",
     title: "Wordle but with access to all the levels",
     url: "https://tranquil-croquembouche-4cdce0.netlify.app/",
     image: "/images/projects/wordle.png",
-    icon: "/images/sb-favicon.ico",
+    icon: "/images/projects/icons/default.ico",
   },
   {
     label: "Electroneum",
     title: "A revolutionary new digital ecosystem",
     url: "https://electroneum.com/",
     image: "/images/projects/electroneum.png",
-    icon: "/images/sb-favicon.ico",
+    icon: "/images/projects/icons/electroneum.ico",
   },
   {
     label: "Othello",
     title: "Play Othello online against the computer or a friend (locally)",
     url: "https://othello.netlify.app/",
     image: "/images/projects/othello.png",
-    icon: "/images/sb-favicon.ico",
+    icon: "/images/projects/icons/default.ico",
   },
   {
     label: "Drone photography",
     title: "A media companies brochure site",
     url: "https://effortless-maamoul-af63e9.netlify.app/",
     image: "/images/projects/drone.png",
-    icon: "/images/sb-favicon.ico",
+    icon: "/images/projects/icons/drone.png",
+  },
+  {
+    label: "Beep Creative",
+    title: "A digital marketing agency",
+    url: "https://beepcreative.com/",
+    image: "/images/projects/beep.png",
+    icon: "/images/projects/icons/beep.ico",
   },
 ]
 
@@ -121,7 +128,7 @@ export default function Home() {
         rel="nofollow"
         className={`relative rounded-xl overflow-hidden p-4 h-[250px] sm:h-[500px] col-span-5 ${styles}`}
       >
-        <div className="flex gap-2 relative z-20 text-xs font-medium uppercase tracking-wider mb-2">
+        <div className="flex gap-2 relative z-[2] text-xs font-medium uppercase tracking-wider mb-2">
           <Image
             className="h-fit"
             src={project.icon}
@@ -131,10 +138,10 @@ export default function Home() {
           />
           {project.label}
         </div>
-        <Heading component="h5" className="z-20 relative w-2/3 sm:w-1/2">
+        <Heading component="h5" className="z-[2] relative w-3/4">
           {project.title}
         </Heading>
-        {/* <div className="dot-gradient absolute w-full h-1/3 z-10 top-0 left-0"></div> */}
+        <div className="bg-gradient-to-b from-black/80 to-slate-transparent absolute w-full h-1/2 z-[1] top-0 left-0"></div>
         <Image
           src={project.image}
           fill
