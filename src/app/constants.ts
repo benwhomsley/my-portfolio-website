@@ -50,7 +50,7 @@ export const experience: Experience[] = [
     time: "2022 - present",
     title: "Student Beans / Pion",
     url: "https://studentbeans.com",
-    description: "Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.",
+    description: "Currently part of the team that builds and maintains the web platform for the #1 student loyalty network. As well as working on other internal and external projects, my role also extends to mentoring other engineers and helping them grow in their careers.",
     roles: [
       { name: "Senior Javascript Engineer", duration: "~ 7 months" },
       { name: "Javascript Engineer", duration: "2 years 5 months" },
@@ -62,7 +62,7 @@ export const experience: Experience[] = [
     time: "2017 - 2022",
     title: "Electroneum",
     url: "https://electroneum.com",
-    description: "Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.",
+    description: "Worked as part of a startup team building a new digital ecosystem and launching one of the most successful crypto projects of it's time. Leading the UX unit, we brought a revolutionary new digital eco system to market giving unbanked people in emerging economies access to a digital payment system.",
     roles: [{ name: "UX Developer", duration: "~ 5 years" }],
     coreTech: ["Angular", "Ionic", "SASS", "HTML", "Jest", "Git"],
     relatedTech: ["AWS", "Docker", "Node"],
