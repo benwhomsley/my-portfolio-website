@@ -178,10 +178,7 @@ export default function Home() {
   // );
 
   const renderContactSection = () => (
-    <section
-      id="contact"
-      className="w-full flex flex-col p-4 sm:p-10 sm:py-20"
-    >
+    <section id="contact" className="w-full flex flex-col p-4 sm:p-10 sm:py-20">
       <div className="flex-col gap-6 sm:flex-row flex justify-between">
         <div className="w-fit">
           <Heading component="h2">Contact</Heading>
@@ -191,7 +188,9 @@ export default function Home() {
         name="contact"
         data-netlify={true}
         className="w-full max-w-lg mt-10 bg-black/60 rounded-xl shadow-lg p-8 flex flex-col gap-6 border border-gray-800"
+        hidden
       >
+        <input type="hidden" name="form-name" value="contact" />
         <div className="flex flex-col gap-2">
           <label htmlFor="name" className="text-gray-200 font-medium">
             Name
