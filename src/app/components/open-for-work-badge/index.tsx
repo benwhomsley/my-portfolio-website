@@ -1,6 +1,6 @@
 const OpenForWorkBadge = () => {
   return (
-    <div className='absolute top-10 left-5 z-[100] w-[100px] h-[100px]'>
+    <a href="#contact" className='absolute top-10 left-5 z-[100] w-[100px] h-[100px] before:content-[]'>
       <svg
         height='100'
         width='100'
@@ -25,7 +25,7 @@ const OpenForWorkBadge = () => {
           </textPath>
         </text>
       </svg>
-    </div>
+    </a>
   )
 }
 

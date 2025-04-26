@@ -11,8 +11,11 @@ export const Nav = () => {
         <li>
           <a className="font-medium" href="#projects">Projects</a>
         </li>
-        <li>
+        {/* <li>
           <a className="font-medium" href="#behind">Behind the keyoard</a>
+        </li> */}
+        <li>
+          <a className="font-medium" href="#contact">Contact</a>
         </li>
       </ul>
     </nav>

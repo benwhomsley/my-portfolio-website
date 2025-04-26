@@ -1,11 +1,11 @@
-import Image from "next/image"
-import Heading from "./components/heading"
-import Experience from "./components/experience"
-import Nav from "./components/nav"
-import Footer from "./components/footer"
-import Header from "./components/header"
-import { Project } from "./types"
-import { experience, projects } from "./constants"
+import Image from "next/image";
+import Heading from "./components/heading";
+import Experience from "./components/experience";
+import Nav from "./components/nav";
+import Footer from "./components/footer";
+import Header from "./components/header";
+import { Project } from "./types";
+import { experience, projects } from "./constants";
 
 export default function Home() {
   const renderExperienceSection = () => (
@@ -44,10 +44,13 @@ export default function Home() {
         />
       ))}
     </section>
-  )
+  );
 
   const renderProject = (project: Project, index: number) => {
-    const styles = (index+1) === 2 || (index+1) % 3 === 0 ? "sm:col-span-2" : "sm:col-span-3"
+    const styles =
+      index + 1 === 2 || (index + 1) % 3 === 0
+        ? "sm:col-span-2"
+        : "sm:col-span-3";
     return (
       <a
         key={index}
@@ -79,8 +82,8 @@ export default function Home() {
           className="z-0"
         />
       </a>
-    )
-  }
+    );
+  };
 
   const renderProjectsSection = () => {
     return (
@@ -93,86 +96,144 @@ export default function Home() {
         </Heading>
         <div className="grid grid-cols-5 gap-6">
           {projects.map((project, index) => {
-            return renderProject(project, index)
+            return renderProject(project, index);
           })}
         </div>
       </section>
-    )
-  }
+    );
+  };
 
-  const renderBehindTheKeyboardSection = () => (
+  // const renderBehindTheKeyboardSection = () => (
+  //   <section
+  //     id="behind"
+  //     className="w-full flex flex-col justify-center p-4 sm:p-10"
+  //   >
+  //     <div className="w-fit content-center">
+  //       <Heading component="h2">
+  //         There&apos;s more to a person than just work, peek behind the
+  //         keyboard.
+  //       </Heading>
+  //     </div>
+
+  //     <div className="relative flex flex-wrap gap-8 py-8">
+  //       <div className="relative w-[320px] h-[400px] rounded-lg overflow-hidden">
+  //         <Image
+  //           src={"/images/family.jpg"}
+  //           fill
+  //           sizes="50vw"
+  //           style={{ objectFit: "cover" }}
+  //           alt=""
+  //           className="w-[calc(100%-40px)]"
+  //         />
+  //       </div>
+  //       <div>
+  //         <Heading component="h3" className="mb-1">
+  //           Family & Sport
+  //         </Heading>
+  //         <sub className="text-lg text-gray-400 leading-none">
+  //           Father of one <span className="text-yellow-300">&#47;&#47;</span>{" "}
+  //           Black belt (1st dan) in Taekwondo
+  //         </sub>
+  //       </div>
+  //     </div>
+  //     {/* <div className='relative flex flex-wrap gap-8 py-8'>
+  //       <div className='relative w-[320px] h-[400px] rounded-lg overflow-hidden'>
+  //         <Image
+  //           src={"/images/family.jpg"}
+  //           fill
+  //           objectFit="cover"
+  //           alt=""
+  //           className="w-[calc(100%-40px)]"
+  //         />
+  //       </div>
+  //       <div>
+  //         <Heading component="h3" className="mb-1">
+  //           For fun
+  //         </Heading>
+  //         <sub className="text-lg text-gray-400 leading-none">
+  //           Video & board game lover
+  //         </sub>
+  //       </div>
+  //     </div>
+  //     <div className="relative flex flex-wrap gap-8 py-8">
+  //       <div className="relative w-[320px] h-[400px] rounded-lg overflow-hidden">
+  //         <Image
+  //           src={"/images/family.jpg"}
+  //           fill
+  //           objectFit="cover"
+  //           alt=""
+  //           className="w-[calc(100%-40px)]"
+  //         />
+  //       </div>
+  //       <div>
+  //         <Heading component="h3" className="mb-1">
+  //           Coding fun
+  //         </Heading>
+  //         <sub className="text-lg text-gray-400 leading-none">
+  //           Dabble in creative coding from time to time
+  //         </sub>
+  //       </div>
+  //     </div> */}
+  //   </section>
+  // );
+
+  const renderContactSection = () => (
     <section
-      id="behind"
-      className="w-full flex flex-col justify-center p-4 sm:p-10"
+      id="contact"
+      className="w-full flex flex-col p-4 sm:p-10 sm:py-20"
     >
-      <div className="w-fit content-center">
-        <Heading component="h2">
-          There&apos;s more to a person than just work, peek behind the
-          keyboard.
-        </Heading>
-      </div>
-
-      <div className="relative flex flex-wrap gap-8 py-8">
-        <div className="relative w-[320px] h-[400px] rounded-lg overflow-hidden">
-          <Image
-            src={"/images/family.jpg"}
-            fill
-            sizes="50vw"
-            style={{ objectFit: "cover" }}
-            alt=""
-            className="w-[calc(100%-40px)]"
-          />
-        </div>
-        <div>
-          <Heading component="h3" className="mb-1">
-            Family & Sport
-          </Heading>
-          <sub className="text-lg text-gray-400 leading-none">
-            Father of one <span className="text-yellow-300">&#47;&#47;</span>{" "}
-            Black belt (1st dan) in Taekwondo
-          </sub>
+      <div className="flex-col gap-6 sm:flex-row flex justify-between">
+        <div className="w-fit">
+          <Heading component="h2">Contact</Heading>
         </div>
       </div>
-      {/* <div className='relative flex flex-wrap gap-8 py-8'>
-        <div className='relative w-[320px] h-[400px] rounded-lg overflow-hidden'>
-          <Image
-            src={"/images/family.jpg"}
-            fill
-            objectFit="cover"
-            alt=""
-            className="w-[calc(100%-40px)]"
+      <form
+        name="contact"
+        data-netlify={true}
+        className="w-full max-w-lg mt-10 bg-black/60 rounded-xl shadow-lg p-8 flex flex-col gap-6 border border-gray-800"
+      >
+        <div className="flex flex-col gap-2">
+          <label htmlFor="name" className="text-gray-200 font-medium">
+            Name
+          </label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            className="px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-yellow-300 transition"
           />
         </div>
-        <div>
-          <Heading component="h3" className="mb-1">
-            For fun
-          </Heading>
-          <sub className="text-lg text-gray-400 leading-none">
-            Video & board game lover
-          </sub>
-        </div>
-      </div>
-      <div className="relative flex flex-wrap gap-8 py-8">
-        <div className="relative w-[320px] h-[400px] rounded-lg overflow-hidden">
-          <Image
-            src={"/images/family.jpg"}
-            fill
-            objectFit="cover"
-            alt=""
-            className="w-[calc(100%-40px)]"
+        <div className="flex flex-col gap-2">
+          <label htmlFor="email" className="text-gray-200 font-medium">
+            Email
+          </label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            className="px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-yellow-300 transition"
           />
         </div>
-        <div>
-          <Heading component="h3" className="mb-1">
-            Coding fun
-          </Heading>
-          <sub className="text-lg text-gray-400 leading-none">
-            Dabble in creative coding from time to time
-          </sub>
+        <div className="flex flex-col gap-2">
+          <label htmlFor="message" className="text-gray-200 font-medium">
+            Message
+          </label>
+          <textarea
+            id="message"
+            name="message"
+            rows={5}
+            className="px-4 py-2 rounded-lg bg-gray-900 border border-gray-700 text-gray-100 focus:outline-none focus:ring-2 focus:ring-yellow-300 transition resize-none"
+          />
         </div>
-      </div> */}
+        <button
+          type="submit"
+          className="mt-4 bg-yellow-300 text-black font-semibold px-6 py-2 rounded-lg shadow hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400 transition"
+        >
+          Send
+        </button>
+      </form>
     </section>
-  )
+  );
 
   return (
     <div className="max-w-[1200px] mx-auto min-h-screen font-[family-name:var(--font-geist-sans)]">
@@ -182,9 +243,10 @@ export default function Home() {
         <Header />
         {renderExperienceSection()}
         {renderProjectsSection()}
-        {renderBehindTheKeyboardSection()}
+        {/* {renderBehindTheKeyboardSection()} */}
+        {renderContactSection()}
       </main>
       <Footer />
     </div>
-  )
+  );
 }
