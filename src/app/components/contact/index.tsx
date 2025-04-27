@@ -1,7 +1,5 @@
 'use client'
 
-import { FormEventHandler } from 'react'
-
 const ContactForm = () => {
   const handleFormSubmit = async (event: any) => {
     event.preventDefault()
