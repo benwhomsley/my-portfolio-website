@@ -52,8 +52,8 @@ export const experience: Experience[] = [
     url: "https://studentbeans.com",
     description: "Currently part of the team that builds and maintains the web platform for the #1 student loyalty network. As well as working on other internal and external projects, my role also extends to mentoring other engineers and helping them grow in their careers.",
     roles: [
-      { name: "Senior Javascript Engineer", duration: "~ 7 months" },
-      { name: "Javascript Engineer", duration: "2 years 5 months" },
+      { name: "Senior JavaScript Engineer", duration: "~ 7 months" },
+      { name: "JavaScript Engineer", duration: "2 years 5 months" },
     ],
     coreTech: ["React", "Next.js", "Tailwind", "HTML", "Jest", "Git"],
     relatedTech: ["AWS", "CI/CD", "Docker", "Node"],

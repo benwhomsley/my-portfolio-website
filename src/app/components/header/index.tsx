@@ -15,7 +15,7 @@ export const Header = () => {
       Hi, I&apos;m Ben.
     </Heading>
     <sub className='text-lg text-gray-400 leading-none'>
-      A Javascript Engineer <span className='text-yellow-300'>&#47;&#47;</span>{' '}
+      A JavaScript Engineer <span className='text-yellow-300'>&#47;&#47;</span>{' '}
       Front End Developer <span className='text-yellow-300'>&#47;&#47;</span> UX
       Developer.
     </sub>

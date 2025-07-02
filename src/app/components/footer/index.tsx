@@ -1,9 +1,9 @@
 export const Footer = () => {
   return (
-    <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center py-8">
-      <a href="https://www.linkedin.com/in/ben-whomsley/" target="_blank">
+    <footer className="row-start-3 flex gap-5 flex-wrap items-center justify-center py-8">
+      <a className="before:content-[] fill-white hover:fill-yellow-300" href="https://www.linkedin.com/in/ben-whomsley/" target="_blank">
         <svg
-          fill="#ffffff"
+          fill="inherit"
           height="16px"
           width="16px"
           version="1.1"
@@ -32,6 +32,7 @@ export const Footer = () => {
           </g>
         </svg>
       </a>
+      <a href="/cv.pdf" className="font-extrabold leading-[1px] mt-[5px] before:content-[]" target="_blank">CV</a>
     </footer>
   )
 }
