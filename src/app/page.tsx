@@ -104,80 +104,6 @@ export default function Home() {
     );
   };
 
-  // const renderBehindTheKeyboardSection = () => (
-  //   <section
-  //     id="behind"
-  //     className="w-full flex flex-col justify-center p-4 sm:p-10"
-  //   >
-  //     <div className="w-fit content-center">
-  //       <Heading component="h2">
-  //         There&apos;s more to a person than just work, peek behind the
-  //         keyboard.
-  //       </Heading>
-  //     </div>
-
-  //     <div className="relative flex flex-wrap gap-8 py-8">
-  //       <div className="relative w-[320px] h-[400px] rounded-lg overflow-hidden">
-  //         <Image
-  //           src={"/images/family.jpg"}
-  //           fill
-  //           sizes="50vw"
-  //           style={{ objectFit: "cover" }}
-  //           alt=""
-  //           className="w-[calc(100%-40px)]"
-  //         />
-  //       </div>
-  //       <div>
-  //         <Heading component="h3" className="mb-1">
-  //           Family & Sport
-  //         </Heading>
-  //         <sub className="text-lg text-gray-400 leading-none">
-  //           Father of one <span className="text-yellow-300">&#47;&#47;</span>{" "}
-  //           Black belt (1st dan) in Taekwondo
-  //         </sub>
-  //       </div>
-  //     </div>
-  //     {/* <div className='relative flex flex-wrap gap-8 py-8'>
-  //       <div className='relative w-[320px] h-[400px] rounded-lg overflow-hidden'>
-  //         <Image
-  //           src={"/images/family.jpg"}
-  //           fill
-  //           objectFit="cover"
-  //           alt=""
-  //           className="w-[calc(100%-40px)]"
-  //         />
-  //       </div>
-  //       <div>
-  //         <Heading component="h3" className="mb-1">
-  //           For fun
-  //         </Heading>
-  //         <sub className="text-lg text-gray-400 leading-none">
-  //           Video & board game lover
-  //         </sub>
-  //       </div>
-  //     </div>
-  //     <div className="relative flex flex-wrap gap-8 py-8">
-  //       <div className="relative w-[320px] h-[400px] rounded-lg overflow-hidden">
-  //         <Image
-  //           src={"/images/family.jpg"}
-  //           fill
-  //           objectFit="cover"
-  //           alt=""
-  //           className="w-[calc(100%-40px)]"
-  //         />
-  //       </div>
-  //       <div>
-  //         <Heading component="h3" className="mb-1">
-  //           Coding fun
-  //         </Heading>
-  //         <sub className="text-lg text-gray-400 leading-none">
-  //           Dabble in creative coding from time to time
-  //         </sub>
-  //       </div>
-  //     </div> */}
-  //   </section>
-  // );
-
   const renderContactSection = () => (
     <section id="contact" className="w-full flex flex-col p-4 sm:p-10 sm:py-20">
       <div className="flex-col gap-6 sm:flex-row flex justify-between">
@@ -197,7 +123,6 @@ export default function Home() {
         <Header />
         {renderExperienceSection()}
         {renderProjectsSection()}
-        {/* {renderBehindTheKeyboardSection()} */}
         {renderContactSection()}
       </main>
       <Footer />
