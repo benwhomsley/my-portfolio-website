@@ -13,10 +13,27 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 })
 
+const title = 'Ben Whomsley — Senior JavaScript Engineer'
+const description =
+  'Senior JavaScript Engineer with 10+ years in industry. Portfolio of professional and personal front-end projects, experience, and contact details.'
+
 export const metadata: Metadata = {
-  title: 'Ben Whomsley',
-  description:
-    'Showcase of my design and software engineering projects & and insight into my experience and personal life.',
+  metadataBase: new URL('https://whomsley.dev'),
+  title,
+  description,
+  openGraph: {
+    title,
+    description,
+    type: 'website',
+    // TODO: replace with a dedicated 1200x630 social share image
+    images: ['/images/projects/studentbeans.png'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title,
+    description,
+    images: ['/images/projects/studentbeans.png'],
+  },
 }
 
 export default function RootLayout({

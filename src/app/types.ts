@@ -4,6 +4,7 @@ export type Project = {
     url: string
     image: string
     icon: string
+    category: "client" | "side"
   }
 
   export type Experience = {

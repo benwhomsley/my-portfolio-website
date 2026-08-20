@@ -1,0 +1,41 @@
+image: node:20
+
+stages:
+  - lint
+  - test
+  - build
+
+.node_cache: &node_cache
+  cache:
+    key:
+      files:
+        - package-lock.json
+    paths:
+      - .npm/
+    policy: pull-push
+  before_script:
+    - npm ci --cache .npm --prefer-offline
+
+lint:
+  stage: lint
+  <<: *node_cache
+  script:
+    - npm run lint
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_BRANCH == "main"'
+
+test:
+  stage: test
+  <<: *node_cache
+  script:
+    - npm test -- --ci
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_BRANCH == "main"'
+
+build:
+  stage: build
+  <<: *node_cache
+  script:
+    - npm run build
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "merge_request_event" || $CI_COMMIT_BRANCH == "main"'

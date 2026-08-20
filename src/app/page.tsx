@@ -26,7 +26,7 @@ export default function Home() {
             <li className="px-[7px] py-[2px] rounded-md font-medium before:inline-block before:w-3 before:h-3 before:bg-yellow-300 before:rounded-full before:mr-[5px]">
               Core tech
             </li>
-            <li className="px-[7px] py-[2px] rounded-md font-medium before:inline-block before:w-3 before:h-3 before:bg-yellow-50 before:rounded-full before:mr-[5px]">
+            <li className="px-[7px] py-[2px] rounded-md font-medium before:inline-block before:w-3 before:h-3 before:bg-transparent before:border-2 before:border-gray-400 before:rounded-full before:mr-[5px]">
               Related tech
             </li>
           </ul>
@@ -57,7 +57,7 @@ export default function Home() {
         key={index}
         href={project.url}
         target="_blank"
-        rel="nofollow"
+        rel="nofollow noopener noreferrer"
         className={`relative rounded-xl overflow-hidden p-4 h-[250px] sm:h-[500px] col-span-5 ${styles}`}
       >
         <div className="flex gap-2 relative z-[2] text-xs font-medium uppercase tracking-wider mb-2">
@@ -79,7 +79,7 @@ export default function Home() {
           fill
           sizes="50vw"
           style={{ objectFit: "cover" }}
-          alt=""
+          alt={`Screenshot of the ${project.label} website`}
           className="z-0"
         />
       </a>
@@ -87,6 +87,9 @@ export default function Home() {
   };
 
   const renderProjectsSection = () => {
+    const clientProjects = projects.filter((p) => p.category === "client");
+    const sideProjects = projects.filter((p) => p.category === "side");
+
     return (
       <section
         id="projects"
@@ -95,8 +98,25 @@ export default function Home() {
         <Heading component="h2" className="mb-[100px]">
           Projects
         </Heading>
+
+        <Heading component="h4" className="mb-6">
+          Professional work
+        </Heading>
+        <div className="grid grid-cols-5 gap-6 mb-20">
+          {clientProjects.map((project, index) => {
+            return renderProject(project, index);
+          })}
+        </div>
+
+        <Heading component="h4" className="mb-2">
+          Side projects
+        </Heading>
+        <p className="text-gray-500 mb-6">
+          Smaller builds outside of client work, used to explore ideas and
+          keep hands-on with new tech.
+        </p>
         <div className="grid grid-cols-5 gap-6">
-          {projects.map((project, index) => {
+          {sideProjects.map((project, index) => {
             return renderProject(project, index);
           })}
         </div>

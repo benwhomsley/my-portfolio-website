@@ -1,30 +1,14 @@
 const OpenForWorkBadge = () => {
   return (
-    <a href="#contact" className='absolute top-10 left-5 z-[100] w-[100px] h-[100px] before:content-[]'>
-      <svg
-        height='100'
-        width='100'
-        className='animate-[spin_8s_linear_infinite]'
-      >
-        <path
-          fill='none'
-          id='ellipse-id-r2'
-          d='M0 50a50 50 0 1 0 100 0a50 50 0 1 0 -100 0'
-        ></path>
-        <text
-          fill='white'
-          className='tracking-[0.8em] text-xs'
-        >
-          <textPath
-            href='#ellipse-id-r2'
-            startOffset='0'
-          >
-            <tspan className='font-normal uppercase'>
-              Open * for * work *{' '}
-            </tspan>
-          </textPath>
-        </text>
-      </svg>
+    <a
+      href='#contact'
+      className='flex items-center gap-2 rounded-full border border-yellow-300/40 bg-yellow-300/10 px-4 py-2 text-xs font-medium uppercase tracking-wider text-yellow-300 transition-colors hover:bg-yellow-300/20'
+    >
+      <span className='relative flex h-2 w-2'>
+        <span className='absolute inline-flex h-full w-full animate-ping rounded-full bg-yellow-300 opacity-75'></span>
+        <span className='relative inline-flex h-2 w-2 rounded-full bg-yellow-300'></span>
+      </span>
+      Open for work
     </a>
   )
 }

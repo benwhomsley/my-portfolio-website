@@ -19,16 +19,16 @@ a {
   @apply relative transition-all
 }
 
-/* a:after {
-  @apply absolute content-[''] top-[100%] right-0 w-full h-[1px] bg-white transition-all
-} */
-
-a:before {
+.link-underline:before {
   @apply absolute content-[''] top-[100%] left-0 w-0 h-[2px] bg-yellow-300 transition-all
 }
 
-a:hover {
-  @apply text-yellow-300 before:w-full after:w-0
+.link-underline:hover {
+  @apply text-yellow-300
+}
+
+.link-underline:hover:before {
+  @apply w-full
 }
 
 body {

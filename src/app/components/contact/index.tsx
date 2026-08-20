@@ -22,20 +22,26 @@ const ContactForm = () => {
     setFormData({ name: '', email: '', message: '' })
   }
 
-  const handleFormSubmit = async (event: any) => {
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    const formData = new FormData(event.target)
-    const response = await fetch('/__forms.html', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData as unknown as string).toString(),
-    })
 
-    if (response.ok) {
+    try {
+      const body = new URLSearchParams(
+        new FormData(event.currentTarget) as unknown as Record<string, string>
+      ).toString()
+      const response = await fetch('/__forms.html', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body,
+      })
+
+      if (!response.ok) throw new Error(`Form submission failed: ${response.status}`)
+
       clearForm()
       setShowNotification(true)
       setNotificationMessage('Message submitted successfully')
-    } else {
+    } catch (error) {
+      console.error(error)
       setShowNotification(true)
       setNotificationMessage('Error sending message')
     }

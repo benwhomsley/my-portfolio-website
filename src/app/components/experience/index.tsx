@@ -24,7 +24,7 @@ export const Experience = ({
           target='_blank'
           rel='noopener noreferrer'
           href={url}
-          className='flex w-fit gap-3 items-center transition-all hover:text-yellow-300'
+          className='link-underline flex w-fit gap-3 items-center transition-all'
         >
           {title}{' '}
           <svg
@@ -92,7 +92,7 @@ export const Experience = ({
               return (
                 <li
                   key={index}
-                  className='px-[8px] py-[2px] bg-yellow-50 text-yellow-950 rounded-xl text-xs font-semibold select-none'
+                  className='px-[8px] py-[2px] bg-transparent border border-gray-500 text-gray-300 rounded-xl text-xs font-semibold select-none'
                 >
                   {name}
                 </li>
@@ -100,36 +100,6 @@ export const Experience = ({
             })}
           </ul>
         </div>
-
-        {/* <div className='grid grid-cols-1 grid-rows-1 gap-4 md:grid-cols-3'>
-                <div className='relative h-[250px] mt-5'>
-                  <Image
-                    src={'/images/sb-screenshot.png'}
-                    fill
-                    objectFit='contain'
-                    alt=''
-                    className='rounded-lg'
-                  />
-                </div>
-                <div className='relative h-[250px] mt-5 rounded-lg overflow-hidden'>
-                  <Image
-                    src={'/images/sb-screenshot.png'}
-                    fill
-                    objectFit='contain'
-                    alt=''
-                    className='rounded-lg'
-                  />
-                </div>
-                <div className='relative h-[250px] mt-5 rounded-lg overflow-hidden'>
-                  <Image
-                    src={'/images/sb-screenshot.png'}
-                    fill
-                    objectFit='contain'
-                    alt=''
-                    className='rounded-lg'
-                  />
-                </div>
-              </div> */}
       </div>
     </div>
   )

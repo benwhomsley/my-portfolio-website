@@ -7,13 +7,7 @@ export const projects: Project[] = [
     url: "https://studentbeans.com",
     image: "/images/projects/studentbeans.png",
     icon: "/images/projects/icons/studentbeans.ico",
-  },
-  {
-    label: "Worlde Unlimited",
-    title: "Wordle but with access to all the levels",
-    url: "https://tranquil-croquembouche-4cdce0.netlify.app/",
-    image: "/images/projects/wordle.png",
-    icon: "/images/projects/icons/default.ico",
+    category: "client",
   },
   {
     label: "Electroneum",
@@ -21,13 +15,7 @@ export const projects: Project[] = [
     url: "https://electroneum.com/",
     image: "/images/projects/electroneum.png",
     icon: "/images/projects/icons/electroneum.ico",
-  },
-  {
-    label: "Othello",
-    title: "Play Othello online against the computer or a friend (locally)",
-    url: "https://othello.netlify.app/",
-    image: "/images/projects/othello.png",
-    icon: "/images/projects/icons/default.ico",
+    category: "client",
   },
   {
     label: "Drone photography",
@@ -35,6 +23,7 @@ export const projects: Project[] = [
     url: "https://moodymoosemedia.com/",
     image: "/images/projects/drone.png",
     icon: "/images/projects/icons/drone.png",
+    category: "client",
   },
   {
     label: "Beep Creative",
@@ -42,6 +31,23 @@ export const projects: Project[] = [
     url: "https://beepcreative.com/",
     image: "/images/projects/beep.png",
     icon: "/images/projects/icons/beep.ico",
+    category: "client",
+  },
+  {
+    label: "Wordle Unlimited",
+    title: "Wordle but with access to all the levels",
+    url: "https://tranquil-croquembouche-4cdce0.netlify.app/",
+    image: "/images/projects/wordle.png",
+    icon: "/images/projects/icons/default.ico",
+    category: "side",
+  },
+  {
+    label: "Othello",
+    title: "Play Othello online against the computer or a friend (locally)",
+    url: "https://othello.netlify.app/",
+    image: "/images/projects/othello.png",
+    icon: "/images/projects/icons/default.ico",
+    category: "side",
   },
 ];
 
@@ -64,7 +70,7 @@ export const experience: Experience[] = [
     title: "Electroneum",
     url: "https://electroneum.com",
     description:
-      "Worked as part of a startup team building a new digital ecosystem and launching one of the most successful crypto projects of it's time. Leading the UX unit, we brought a revolutionary new digital eco system to market giving unbanked people in emerging economies access to a digital payment system.",
+      "Worked as part of a startup team building a new digital ecosystem and launching one of the most successful crypto projects of its time. Leading the UX unit, we brought a revolutionary new digital ecosystem to market, giving unbanked people in emerging economies access to a digital payment system.",
     roles: [{ name: "UX Developer", duration: "~ 5 years" }],
     coreTech: ["Angular", "Ionic", "SASS", "HTML", "Jest", "Git"],
     relatedTech: ["AWS", "Docker", "Node"],
