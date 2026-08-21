@@ -1,5 +1,25 @@
 import { Project, Experience } from "./types";
 
+function getDurationSince(startDate: Date): string {
+  const now = new Date();
+
+  let years = now.getFullYear() - startDate.getFullYear();
+  let months = now.getMonth() - startDate.getMonth();
+
+  if (now.getDate() < startDate.getDate()) {
+    months -= 1;
+  }
+  if (months < 0) {
+    years -= 1;
+    months += 12;
+  }
+
+  const yearPart = years > 0 ? `${years} year${years !== 1 ? "s" : ""}` : "";
+  const monthPart = months > 0 ? `${months} month${months !== 1 ? "s" : ""}` : "";
+
+  return [yearPart, monthPart].filter(Boolean).join(" ") || "< 1 month";
+}
+
 export const projects: Project[] = [
   {
     label: "Student Beans",
@@ -59,7 +79,10 @@ export const experience: Experience[] = [
     description:
       "Currently part of the team that builds and maintains the web platform for the #1 student loyalty network. As well as working on other internal and external projects, my role also extends to mentoring other engineers and helping them grow in their careers.",
     roles: [
-      { name: "Senior JavaScript Engineer", duration: "~ 7 months" },
+      {
+        name: "Senior JavaScript Engineer",
+        duration: getDurationSince(new Date(2024, 6, 1)),
+      },
       { name: "JavaScript Engineer", duration: "2 years 5 months" },
     ],
     coreTech: ["React", "Next.js", "Tailwind", "HTML", "Jest", "Git"],
