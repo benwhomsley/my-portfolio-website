@@ -28,6 +28,18 @@ export const projects: Project[] = [
     image: "/images/projects/studentbeans.png",
     icon: "/images/projects/icons/studentbeans.ico",
     category: "client",
+    intro:
+      "Student Beans (part of Pion) is the world's largest platform for student and youth verification, connecting millions of students worldwide with exclusive discounts from thousands of brands.",
+    role:
+      "I've been part of the core web platform team and the verification & security team, first as a JavaScript Engineer and now as a Senior JavaScript Engineer, shipping features end-to-end across the React/Next.js codebase and mentoring other engineers to help raise the team's overall pace and code quality.",
+    impact: [
+      "Mentored junior and mid-level engineers, helping them earn promotions, build confidence and ship independently.",
+      "Led a cross-function caching infrastructure initiative to fix performance issues and improve user experience.",
+      "Raised Lighthouse performance score from under 50 to 90+ across studentbeans.com, improving performance visitor satisfaction.",
+      "Led an accessibility initiative to bring the platform into WCAG compliance and introduced automated testing to ensure continued compliance.",
+      "Improved SEO across hundreds of brand pages, driving organic traffic and revenue growth.",
+    ],
+    tech: ["React", "Next.js", "Tailwind", "AWS", "CI/CD"],
   },
   {
     label: "Electroneum",
@@ -36,6 +48,16 @@ export const projects: Project[] = [
     image: "/images/projects/electroneum.png",
     icon: "/images/projects/icons/electroneum.ico",
     category: "client",
+    intro:
+      "Electroneum is a fintech and digital ecosystem that set out to bring mobile-first financial services to unbanked users in emerging economies, becoming one of the most talked-about crypto ventures of its time.",
+    role:
+      "I led the UX unit through a 5-year, high-growth startup phase, taking ownership of research and product design through to hands-on implementation across web and hybrid mobile apps (Angular/Ionic), working directly with founders and engineers to bring the product to market.",
+    impact: [
+      "Took an idea from concept to market, working closely with founders and engineers to deliver a product that resonated with users in emerging economies.",
+      "Helped build a company known for championing responsible practice in a sector often associated with risk — contributing to one of the most successful ICOs of its time raising ~£40m.",
+      "Established a culture of user-centered design and continuous improvement through hands-on mentorship and collaboration.",
+    ],
+    tech: ["Angular", "Ionic", "SASS", "UX Research"],
   },
   {
     label: "Drone photography",
@@ -43,15 +65,7 @@ export const projects: Project[] = [
     url: "https://moodymoosemedia.com/",
     image: "/images/projects/drone.png",
     icon: "/images/projects/icons/drone.png",
-    category: "client",
-  },
-  {
-    label: "Beep Creative",
-    title: "A digital marketing agency",
-    url: "https://beepcreative.com/",
-    image: "/images/projects/beep.png",
-    icon: "/images/projects/icons/beep.ico",
-    category: "client",
+    category: "side",
   },
   {
     label: "Wordle Unlimited",
@@ -67,6 +81,14 @@ export const projects: Project[] = [
     url: "https://othello.netlify.app/",
     image: "/images/projects/othello.png",
     icon: "/images/projects/icons/default.ico",
+    category: "side",
+  },
+  {
+    label: "Beep Creative",
+    title: "A digital marketing agency",
+    url: "https://beepcreative.com/",
+    image: "/images/projects/beep.png",
+    icon: "/images/projects/icons/beep.ico",
     category: "side",
   },
 ];

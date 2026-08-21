@@ -1,10 +1,11 @@
-import Image from "next/image";
 import Heading from "./components/heading";
 import Experience from "./components/experience";
 import Nav from "./components/nav";
 import Footer from "./components/footer";
 import Header from "./components/header";
-import { Project } from "./types";
+import ProjectCard from "./components/project-card";
+import CaseStudyCard from "./components/case-study-card";
+import { SideProject, CaseStudyProject } from "./types";
 import { experience, projects } from "./constants";
 import ContactForm from "./components/contact";
 
@@ -47,48 +48,13 @@ export default function Home() {
     </section>
   );
 
-  const renderProject = (project: Project, index: number) => {
-    const styles =
-      index + 1 === 2 || (index + 1) % 3 === 0
-        ? "sm:col-span-2"
-        : "sm:col-span-3";
-    return (
-      <a
-        key={index}
-        href={project.url}
-        target="_blank"
-        rel="nofollow noopener noreferrer"
-        className={`relative rounded-xl overflow-hidden p-4 h-[250px] sm:h-[500px] col-span-5 ${styles}`}
-      >
-        <div className="flex gap-2 relative z-[2] text-xs font-medium uppercase tracking-wider mb-2">
-          <Image
-            className="h-fit"
-            src={project.icon}
-            alt=""
-            width={16}
-            height={16}
-          />
-          {project.label}
-        </div>
-        <Heading component="h5" className="z-[2] relative w-3/4">
-          {project.title}
-        </Heading>
-        <div className="bg-gradient-to-b from-black/80 to-slate-transparent absolute w-full h-1/2 z-[1] top-0 left-0"></div>
-        <Image
-          src={project.image}
-          fill
-          sizes="50vw"
-          style={{ objectFit: "cover" }}
-          alt={`Screenshot of the ${project.label} website`}
-          className="z-0"
-        />
-      </a>
-    );
-  };
-
   const renderProjectsSection = () => {
-    const clientProjects = projects.filter((p) => p.category === "client");
-    const sideProjects = projects.filter((p) => p.category === "side");
+    const clientProjects = projects.filter(
+      (p): p is CaseStudyProject => p.category === "client"
+    );
+    const sideProjects = projects.filter(
+      (p): p is SideProject => p.category === "side"
+    );
 
     return (
       <section
@@ -102,10 +68,10 @@ export default function Home() {
         <Heading component="h4" className="mb-6">
           Professional work
         </Heading>
-        <div className="grid grid-cols-5 gap-6 mb-20">
-          {clientProjects.map((project, index) => {
-            return renderProject(project, index);
-          })}
+        <div className="flex flex-col mb-20">
+          {clientProjects.map((project, index) => (
+            <CaseStudyCard key={index} project={project} />
+          ))}
         </div>
 
         <Heading component="h4" className="mb-2">
@@ -117,7 +83,17 @@ export default function Home() {
         </p>
         <div className="grid grid-cols-5 gap-6">
           {sideProjects.map((project, index) => {
-            return renderProject(project, index);
+            const spanClassName =
+              index + 1 === 2 || (index + 1) % 3 === 0
+                ? "sm:col-span-2"
+                : "sm:col-span-3";
+            return (
+              <ProjectCard
+                key={index}
+                project={project}
+                spanClassName={spanClassName}
+              />
+            );
           })}
         </div>
       </section>
